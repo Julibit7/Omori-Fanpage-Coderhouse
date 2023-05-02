@@ -1,0 +1,322 @@
+/*General*/
+body {
+  background-image: url("../img/fondo.png");
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+}
+
+.fluid2 {
+  width: 100%;
+  height: 100%;
+}
+
+.al60 {
+  width: 60%;
+  height: 100%;
+}
+
+.al20 {
+  width: 20%;
+}
+
+.al50 {
+  width: 50%;
+}
+
+.m20 {
+  margin: 20px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.gridMainPersonajes div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pie {
+  position: static;
+  display: flex;
+  align-items: center;
+  font-family: "Press Start 2P", cursive;
+  font-size: 15px;
+  text-align: center;
+  padding-left: 20px;
+}
+
+h1 {
+  font-family: "Press Start 2P", cursive;
+  font-size: 20px;
+  color: cyan;
+}
+
+.tipografia2 {
+  font-family: "Lacquer", cursive;
+  font-size: 20px;
+}
+
+.tipografia1 {
+  font-family: "Press Start 2P", cursive;
+  font-size: 18px;
+  text-align: center;
+}
+
+.borde {
+  padding: 30px;
+  margin: 30px;
+  text-align: center;
+}
+
+.imgcenter, .video, .borde {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tienda {
+  display: inline-block;
+  background-color: black;
+  color: magenta;
+  font-family: "Press Start 2P", cursive;
+  font-size: 20px;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+}
+
+.fondotx {
+  background-image: url("../img/fondotx.jpg");
+}
+
+.fondotx2 {
+  background-image: url("../img/background.sky.jpg");
+}
+
+.backcolor {
+  background-image: linear-gradient(to bottom, rgb(218, 26, 244), rgb(123, 22, 246));
+}
+
+.backcolor2 {
+  background-image: linear-gradient(to bottom, rgb(81, 231, 231), rgb(22, 99, 45));
+}
+
+.tienda a:hover {
+  background-color: blue;
+}
+
+/*Navegador*/
+.navegador ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+.navegador li {
+  display: inline;
+  text-align: center;
+  margin: 0 10px 0 0;
+  font-family: "Press Start 2P", cursive;
+  font-size: 5px;
+}
+
+.navegador li a {
+  padding: 2px 7px 2px 7px;
+  color: magenta;
+  background-color: #eeeeee;
+  border: 1px solid #ccc;
+  text-decoration: none;
+}
+
+.navegador li a:hover {
+  background-color: magenta;
+  color: #ffffff;
+}
+
+/* Media Queries */
+/* Desktop */
+@media (min-width: 1024px) {
+  /* Grid Index */
+  .grid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto;
+  }
+  header, footer, ul {
+    display: flex;
+  }
+  .gridIndex {
+    display: grid;
+    grid-template-areas: "titulo titulo titulo titulo" "pIzq pIzq imgTxt imgTxt" "imgTxt2 imgTxt2 pDer pDer";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+  }
+  .titulo {
+    grid-area: titulo;
+  }
+  .parrafoIzq {
+    grid-area: pIzq;
+  }
+  .imgTexto {
+    grid-area: imgTxt;
+  }
+  .imgTexto2 {
+    grid-area: imgTxt2;
+  }
+  .parrafoDer {
+    grid-area: pDer;
+  }
+  .just-content-spa-betw {
+    justify-content: space-between;
+  }
+  .align-items-center {
+    align-items: center;
+  }
+  a {
+    color: black;
+    font-size: 18px;
+    padding: 2px;
+    margin: 2px;
+  }
+  /* Grid Main Personajes */
+  .gridMainPersonajes {
+    display: grid;
+    grid-template-areas: "titulo titulo titulo titulo" "char1 char2 char3 char4";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-column-gap: 10px;
+  }
+  .titulo {
+    grid-area: titulo;
+  }
+  .char1 {
+    grid-area: char1;
+  }
+  .char2 {
+    grid-area: char2;
+  }
+  .char3 {
+    grid-area: char3;
+  }
+  .char4 {
+    grid-area: char4;
+  }
+  /* Grid Main Gameplay */
+  .gridMainGameplay {
+    display: grid;
+    grid-template-areas: "titulo" "textogameplay" "combate";
+    grid-template-columns: repeat(1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap: 10px;
+  }
+  .titulo {
+    grid-area: titulo;
+  }
+  .combate {
+    grid-area: combate;
+  }
+  .textogameplay {
+    grid-area: textogameplay;
+  }
+  /* Grid Main Desarrollo */
+  .gridMainDesarrollo {
+    display: grid;
+    grid-template-areas: "titulo titulo" "textoDesarrollo textoDesarrollo2" "imagenDesarrollo imagenDesarrollo2";
+    grid-template-columns: repeat(2fr);
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap: 10px;
+  }
+  .titulo {
+    grid-area: titulo;
+  }
+  .textoDesarrollo {
+    grid-area: textoDesarrollo;
+  }
+  .textoDesarrollo2 {
+    grid-area: textoDesarrollo2;
+  }
+  .imagenDesarrollo {
+    grid-area: imagenDesarrollo;
+  }
+  .imagenDesarrollo2 {
+    grid-area: imagenDesarrollo2;
+  }
+  /* Grid Extras */
+  .grid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto;
+  }
+  .gridExtras {
+    display: grid;
+    grid-template-areas: "titulo titulo titulo titulo" "link1 link1 link2 link2" "extra1 extra1 extra2 extra2" "extra3 extra3 extra4 extra4";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+  }
+  .titulo {
+    grid-area: titulo;
+  }
+  .link1 {
+    grid-area: link1;
+  }
+  .link2 {
+    grid-area: link2;
+  }
+  .extra1 {
+    grid-area: extra1;
+  }
+  .extra2 {
+    grid-area: extra2;
+  }
+  .extra3 {
+    grid-area: extra3;
+  }
+  .extra4 {
+    grid-area: extra4;
+  }
+}
+/* Mobile */
+@media (max-width: 768px) {
+  header, main, footer, .navegador, nav, ul, .video, p, .pie, .desarrollo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  ul {
+    display: flex;
+    padding: 0;
+  }
+  a {
+    display: flex;
+    padding: 2;
+    font-size: 15px;
+    padding: 2px;
+    margin: 2px;
+  }
+  p {
+    font-size: 22px;
+  }
+  .gridMainPersonajes {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
